@@ -1,0 +1,64 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-size: 30px;
+  color: #090cc5;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(https://images.pexels.com/photos/1314543/pexels-photo-1314543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-position: center center;
+  background-size: cover;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(140px, auto) repeat(5, 100px);
+  margin: 100px;
+  justify-content: center;
+  align-content: center;
+}
+
+.result {
+  grid-column: 1 / -1;
+  background-color: #2b2727;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 25px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+button {
+  cursor: pointer;
+  font-size: 30px;
+  border: 1px solid white;
+  background-color: #3783ca;
+  outline: none;
+}
+
+button:hover {
+  background-color: #33ecec;
+}
+
+.previusAction {
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+  opacity: 0.6;
+  padding: 10px;
+}
+
+.actualAction {
+  font-size: 40px;
+  padding: 10px;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
