@@ -1,7 +1,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
   font-size: 30px;
-  color: #090cc5;
+  color: #090c92;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
 }
@@ -18,7 +18,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(140px, auto) repeat(5, 100px);
-  margin: 100px;
+  margin: 0 100px 0 100px;
   justify-content: center;
   align-content: center;
 }
@@ -47,18 +47,48 @@ button:hover {
   background-color: #33ecec;
 }
 
-.previusAction {
+.previousAction {
   font-size: 25px;
   font-weight: 500;
   color: white;
   opacity: 0.6;
-  padding: 10px;
+  padding: 2px;
 }
 
 .actualAction {
   font-size: 40px;
-  padding: 10px;
+  padding: 2px;
   color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 0px;
+  padding: 15px;
+  background-color: #ade0f0;
+  color: #1570bb;
+}
+
+.attention {
+  display: block;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+  background-color: white;
+}
+
+h2 {
+  margin-bottom: 0px;
+  padding: 10px;
+  color: black;
+}
+
+h3 {
+  margin-top: 0px;
+  color: black;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

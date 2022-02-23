@@ -17,13 +17,15 @@ let operation = undefined;
 
 //FUNKCJE
 
-//obliczanie wyniku (sprwadzenie)
+//obliczanie resultLoopu (sprwadzenie)
 
 const count = () => {
     let action 
+    
     if(!previousOperand || !actualOperand){
         return
     }
+    
     const previous = parseFloat(previousOperand)
     const actual = parseFloat(actualOperand)
 
@@ -55,24 +57,35 @@ const count = () => {
           break
 
           case '^':
-          if(previous.toString().includes('.')){
-            alert('You can only raise natural numbers')
+          if(previous.toString().includes('.') || previous<0){
+            alert('You can only use natural numbers')
             clearResult()
             return
           } 
             action = Math.pow(previous, actual)
           break
 
+          
           case '!':
-          if(previous.toString().includes('.')){
+          if(previous.toString().includes('.') || previous<0){
             alert('You can only use natural numbers')
             clearResult()
             return
           }
-          if (previous === 1 || previous === 0 ) {
-            action = '1'
+          
+          if (previous == 0 ) {
+            action = 1
+            console.log('pierwsza opcja action', action)
           }
-            action = Math.pow(previous, actual)
+          let resultLoop = 1
+          for(let i=1; i<=previous; ++i){
+              
+              resultLoop= resultLoop*i
+              action = resultLoop
+          }
+          
+          console.log('druga opcja action, previous i', action, previous);
+          
           break
 
           default:
@@ -103,7 +116,7 @@ const selectOperation = (sign) => {
     actualOperand = ''
 }
 
-//aktualizacja wyniku
+//aktualizacja resultLoopu
 const updateResult = () => {
     actualAction.innerText = actualOperand
     if (operation != null) {
@@ -131,7 +144,7 @@ const removeNumber = () => {
     actualOperand = actualOperand.toString().slice(0, -1)
 }
 
-// usuwanie wyniku
+// usuwanie resultLoopu
 
 const clearResult = () => {
     previousOperand = '';
