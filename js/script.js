@@ -75,11 +75,9 @@ const count = () => {
           
           if (previous == 0 ) {
             action = 1
-            console.log('pierwsza opcja action', action)
           }
           let resultLoop = 1
           for(let i=1; i<=previous; ++i){
-              
               resultLoop= resultLoop*i
               action = resultLoop
           }

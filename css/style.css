@@ -79,13 +79,13 @@ h1 {
   background-color: white;
 }
 
-h2 {
+.attention h2 {
   margin-bottom: 0px;
   padding: 10px;
   color: black;
 }
 
-h3 {
+.attention h3 {
   margin-top: 0px;
   color: black;
   padding: 10px;
