@@ -1,4 +1,4 @@
-//Stałe
+//STAŁE
 
 const previousAction = document.querySelector('.previousAction');
 const actualAction = document.querySelector('.actualAction');
@@ -9,7 +9,7 @@ const signs = document.querySelectorAll('.sign')
 const numbers = document.querySelectorAll('.number')
 const equal = document.querySelector('.equal')
 
-//Zmienne
+//ZMIENNE
 
 let previousOperand = '';
 let actualOperand = '';
@@ -17,7 +17,7 @@ let operation = undefined;
 
 //FUNKCJE
 
-//obliczanie resultLoopu (sprwadzenie)
+//obliczanie wyniku (sprwadzenie za pomocą switch)
 
 const count = () => {
     let action 
@@ -97,7 +97,7 @@ previousOperand = ''
 
 }
 
-// wybór danego operatora (jeśli jest dodana liczba wcześniej)
+// wybór danego operatora/znaku (jeśli jest dodana liczba wcześniej)
 
 const selectOperation = (sign) => {
     if(actualOperand === '') {
@@ -116,7 +116,7 @@ const selectOperation = (sign) => {
     actualOperand = ''
 }
 
-//aktualizacja resultLoopu
+//aktualizacja wyniku
 const updateResult = () => {
     actualAction.innerText = actualOperand
     if (operation != null) {
@@ -144,7 +144,7 @@ const removeNumber = () => {
     actualOperand = actualOperand.toString().slice(0, -1)
 }
 
-// usuwanie resultLoopu
+// usuwanie wyniku
 
 const clearResult = () => {
     previousOperand = '';
@@ -153,8 +153,7 @@ const clearResult = () => {
 }
 
 
-
-
+// NASŁUCHIWACZE
 
 //pętla która po kliknięciu w liczbę dodaje ją do ekranu
 
@@ -181,10 +180,14 @@ signs.forEach((sign) => {
     })
 })
 
+// nasłuchanie na 'równa się'
+
 equal.addEventListener('click', () => {
     count()
     updateResult()
 })
+
+// nasłuchanie na wyczyść
 
 clear.addEventListener('click', () => {
     clearResult()
