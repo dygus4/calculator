@@ -65,7 +65,6 @@ const count = () => {
             action = Math.pow(previous, actual)
           break
 
-          
           case '!':
           if(previous.toString().includes('.') || previous<0){
             alert('You can only use natural numbers')
@@ -81,9 +80,7 @@ const count = () => {
               resultLoop= resultLoop*i
               action = resultLoop
           }
-          
-          console.log('druga opcja action, previous i', action, previous);
-          
+          console.log('  action, previous', action, previous);
           break
 
           default:
